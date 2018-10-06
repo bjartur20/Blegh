@@ -1,0 +1,102 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Slabo+27px|Vollkorn");
+.current {
+  color: #f29721; }
+
+body {
+  margin-top: 100px; }
+
+.wrapper {
+  text-align: center;
+  font-family: 'Vollkorn', serif;
+  background-color: snow; }
+
+.title {
+  font-family: 'Slabo 27px', serif; }
+
+.images {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr; }
+
+.image {
+  width: 480px;
+  height: auto; }
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin: 0px;
+  padding: 16px 0 0 0;
+  overflow: hidden;
+  font-family: 'Slabo 27px', serif;
+  font-weight: bold;
+  background: White; }
+
+.navBar a {
+  float: left; }
+
+.navBar a {
+  display: block;
+  text-align: center;
+  padding: 16px 16px; }
+
+.navBar a:hover {
+  background-color: #ffb85e; }
+
+.oversteer {
+  float: right;
+  width: 75px;
+  height: auto;
+  padding: 0 64px 16px 0; }
+
+.employee {
+  width: 200px;
+  height: auto; }
+
+/* Sta├░lar */
+a {
+  text-decoration: none; }
+
+/* RWD */
+@media (min-width: 400px) {
+  .images {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr; }
+
+  .title {
+    font-size: 50px;
+    font-family: 'Slabo 27px', serif; }
+
+  .image {
+    width: 420px;
+    height: auto; } }
+@media (min-width: 600px) {
+  .images {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr; }
+
+  .title {
+    font-size: 85px;
+    font-family: 'Slabo 27px', serif; }
+
+  .image {
+    width: 450px;
+    height: auto; } }
+@media (min-width: 800px) {
+  .images {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr; }
+
+  .title {
+    font-size: 125px;
+    font-family: 'Slabo 27px', serif; }
+
+  .image {
+    width: 480px;
+    height: auto; } }

@@ -1,5 +1,5 @@
 <nav>
   {% for item in site.data.navigation %}
-    <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a>
-  {% endfor %}
+    <div class="navBar"><a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a></div>
+  {% endfor %}<a href="https://www.autotrader.com/oversteer" target="_blank"><img class="oversteer" src="https://content.autotrader.com/content/dam/editorial/oversteer/logo-oversteer.jpg" alt="Oversteer"></a>
 </nav>
