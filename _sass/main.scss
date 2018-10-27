@@ -1,10 +1,53 @@
 @import url('https://fonts.googleapis.com/css?family=Slabo+27px|Vollkorn');
 
+/* Icon-ar */
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?1geow0');
+  src:  url('fonts/icomoon.eot?1geow0#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?1geow0') format('truetype'),
+    url('fonts/icomoon.woff?1geow0') format('woff'),
+    url('fonts/icomoon.svg?1geow0#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-home3:before {
+  content: "\e902";
+}
+.icon-file-text:before {
+  content: "\e922";
+}
+.icon-user-tie:before {
+  content: "\e976";
+}
+.icon-info:before {
+  content: "\ea0c";
+}
+
 .current{
 	color: rgb(242, 151, 33);
 }
 body{
 	margin-top: 100px;
+}
+.footer{
+	background: White;
 }
 .wrapper{
 	text-align: center;
@@ -15,14 +58,19 @@ body{
 .title{
 	font-family: 'Slabo 27px', serif;
 }
+sub{
+	border-bottom: 12px solid White;
+}
 .images{
 	text-align: center;
-
 	display: grid;
-	grid-template-columns: 1fr;
+	grid-template-columns: 1fr;	
+}
+.images img{
+	justify-self: center;
 }
 .image{
-	width: 480px;
+	width: 400px;
 	height: auto;
 }
 nav{
@@ -49,16 +97,12 @@ nav{
 .navBar a:hover{
 	background-color: rgb(255, 184, 94);
 }
-.oversteer{
-	float: right;
-
-	width: 75px;
-	height: auto;
-	padding: 0 64px 16px 0;
-}
 .employee{
 	width: 200px;
 	height: auto;
+}
+.oversteer{
+	width: 0px;
 }
 
 /* Staðlar */
@@ -79,11 +123,14 @@ a{
 	font-family: 'Slabo 27px', serif;
 	}
 	.image{
-	width: 420px;
+	width: 360px;
 	height: auto;
 	}
+	.oversteer{
+	width: 50px;
+	}
 }
-@media (min-width: 600px){
+@media (min-width: 900px){
 	.images{
 		text-align: center;
 
@@ -98,8 +145,15 @@ a{
 	width: 450px;
 	height: auto;
 	}
+	.oversteer{
+	float: right;
+
+	width: 75px;
+	height: auto;
+	padding: 0 64px 16px 0;
+	}
 }
-@media (min-width: 800px){
+@media (min-width: 1440px){
 	.images{
 		text-align: center;
 
@@ -114,5 +168,12 @@ a{
 	.image{
 	width: 480px;
 	height: auto;
+	}
+	.oversteer{
+	float: right;
+
+	width: 75px;
+	height: auto;
+	padding: 0 64px 16px 0;
 	}
 }
