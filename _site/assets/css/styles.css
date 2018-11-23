@@ -39,7 +39,8 @@ body {
   margin-top: 100px; }
 
 .footer {
-  background: White; }
+  background: White;
+  padding-top: 10px; }
 
 .wrapper {
   text-align: center;
@@ -64,7 +65,12 @@ sub {
   width: 400px;
   height: auto; }
 
-nav {
+.employee {
+  width: 200px;
+  height: auto; }
+
+/* Navigation bar */
+.nav {
   position: fixed;
   top: 0;
   width: 100%;
@@ -73,7 +79,9 @@ nav {
   overflow: hidden;
   font-family: 'Slabo 27px', serif;
   font-weight: bold;
-  background: White; }
+  background: White;
+  display: none;
+  float: left; }
 
 .navBar a {
   float: left; }
@@ -86,12 +94,196 @@ nav {
 .navBar a:hover {
   background-color: #ffb85e; }
 
-.employee {
-  width: 200px;
-  height: auto; }
-
 .oversteer {
   width: 0px; }
+
+/* Navigation bar for smaller screen */
+input {
+  display: none; }
+
+label,
+ul {
+  border: 1 px solid #cecfd5;
+  border-radius: 6px;
+  bottom: 0; }
+
+label {
+  color: #ffb85e;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 18px;
+  padding: 5px 9px;
+  transition: all .15s ease;
+  position: fixed;
+  bottom: 0;
+  width: 50%;
+  background: #333;
+  overflow: hidden;
+  z-index: 100;
+  text-align: center; }
+
+label:hover {
+  color: #ff7b29; }
+
+input:checked + label {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
+  color: #9799a7; }
+
+.navSmall {
+  transition: all .15s ease;
+  z-index: 2;
+  background-color: #333;
+  width: 50%;
+  position: fixed;
+  bottom: -10em;
+  right: 0;
+  margin: 0 auto; }
+
+input:checked ~ .navSmall {
+  bottom: 2em; }
+
+ul {
+  list-style: none;
+  margin: 8px 0 0 0;
+  padding: 0;
+  width: 100%;
+  z-index: 2;
+  bottom: 0; }
+
+li {
+  border-bottom: 1px solid #cecfd5; }
+
+li:last-child {
+  border-bottom: 0; }
+
+.aNav {
+  color: White;
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+  z-index: 2;
+  bottom: 0; }
+
+.aNav:hover {
+  color: #ff7b29; }
+
+/* Augl├¢sing */
+.adPic {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  animation: picture 2s forwards alternate infinite linear; }
+
+.adPic1 {
+  height: 0px;
+  width: 0px; }
+
+.adPic2 {
+  height: 0px;
+  width: 0px; }
+
+@keyframes picture {
+  from {
+    left: 0px;
+    top: 0px; }
+  to {
+    left: 0px;
+    top: 200px; } }
+.adLogo {
+  width: 300px;
+  height: 200px;
+  transition: transform .3s; }
+
+.adLogo img {
+  justify-self: center; }
+
+.adLogo:hover {
+  transform: scale(2); }
+
+.ad {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  text-align: center;
+  margin: 0 auto;
+  padding: 25px;
+  border-radius: 8px;
+  background-color: white;
+  animation: ad 4s alternate infinite; }
+
+@keyframes ad {
+  from {
+    background-color: #ffb85e; }
+  to {
+    background-color: white; } }
+/* Social media */
+.sLabel {
+  color: #ffb85e;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 18px;
+  padding: 5px 9px;
+  transition: all .15s ease;
+  position: fixed;
+  bottom: 0;
+  width: 50%;
+  background: #333;
+  overflow: hidden;
+  z-index: 100;
+  left: 0;
+  text-align: center; }
+
+.sLabel:hover {
+  color: #ff7b29; }
+
+input:checked + .sLabel {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
+  color: #9799a7; }
+
+.socialNav {
+  transition: all .15s ease;
+  z-index: 2;
+  background-color: #333;
+  width: 50%;
+  position: fixed;
+  bottom: -10em;
+  left: 0; }
+
+input:checked ~ .socialNav {
+  bottom: 16em; }
+
+.icon-bar {
+  position: fixed;
+  z-index: 5; }
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px; }
+
+.icon-bar a:hover {
+  background-color: #000; }
+
+.youtube {
+  background: White;
+  width: 20px; }
+
+.twitter {
+  background: White;
+  width: 20px; }
+
+.reddit {
+  background: White;
+  width: 20px; }
+
+.paypal {
+  background: White;
+  width: 20px; }
 
 /* Sta├░lar */
 a {
@@ -113,7 +305,69 @@ a {
     height: auto; }
 
   .oversteer {
-    width: 50px; } }
+    width: 50px; }
+
+  /* Augl├¢sing */
+  .adPic {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    animation: picture 2s forwards alternate infinite linear; }
+
+  .adPic img {
+    justify-self: center; }
+
+  .adPic1 {
+    height: 0px;
+    width: 0px; }
+
+  .adPic2 {
+    height: 0px;
+    width: 0px; }
+
+  @keyframes picture {
+    from {
+      left: 0px;
+      top: 0px; }
+    to {
+      left: 0px;
+      top: 200px; } }
+  .adLogo {
+    width: 300px;
+    height: 200px;
+    transition: transform .3s; }
+
+  .adLogo img {
+    justify-self: center; }
+
+  .adLogo:hover {
+    transform: scale(2); }
+
+  .ad {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    padding: 25px;
+    border-radius: 8px;
+    background-color: white;
+    animation: ad 4s alternate infinite; }
+
+  @keyframes ad {
+    from {
+      background-color: #ffb85e; }
+    to {
+      background-color: white; } }
+  /* Navigation bar */
+  .navSmall {
+    display: inline-block; }
+
+  label {
+    display: inline-block; }
+
+  .navBar {
+    display: none; } }
 @media (min-width: 900px) {
   .images {
     text-align: center;
@@ -132,7 +386,76 @@ a {
     float: right;
     width: 75px;
     height: auto;
-    padding: 0 64px 16px 0; } }
+    padding: 0 64px 16px 0; }
+
+  /* Augl├¢sing */
+  .adPic {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    animation: picture 2s forwards alternate infinite linear; }
+
+  .adPic img {
+    justify-self: center; }
+
+  @keyframes picture {
+    from {
+      left: 0px;
+      top: 0px; }
+    to {
+      left: 0px;
+      top: 200px; } }
+  .adLogo {
+    width: 300px;
+    height: 200px;
+    transition: transform .3s; }
+
+  .adPic1 {
+    height: 0px;
+    width: 0px; }
+
+  .adLogo:hover {
+    transform: scale(2); }
+
+  .adLogo img {
+    justify-self: center; }
+
+  .ad {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    padding: 25px;
+    border-radius: 8px;
+    background-color: white;
+    animation: ad 4s alternate infinite; }
+
+  @keyframes ad {
+    from {
+      background-color: #ffb85e; }
+    to {
+      background-color: white; } }
+  /* Navigation bar */
+  .navSmall {
+    display: none; }
+
+  label {
+    display: none; }
+
+  .navBar {
+    display: inline-block;
+    float: left; }
+
+  .nav {
+    left: 0;
+    display: inline-block; }
+
+  .icon-bar {
+    top: 20%; }
+
+  .sLabel {
+    display: none; } }
 @media (min-width: 1440px) {
   .images {
     text-align: center;
@@ -152,4 +475,55 @@ a {
     float: right;
     width: 75px;
     height: auto;
-    padding: 0 64px 16px 0; } }
+    padding: 0 64px 16px 0; }
+
+  /* Augl├¢sing */
+  .adPic {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    animation: picture 2s forwards alternate infinite linear; }
+
+  .adPic img {
+    justify-self: center; }
+
+  @keyframes picture {
+    from {
+      left: 0px;
+      top: 0px; }
+    to {
+      left: 0px;
+      top: 200px; } }
+  .adLogo {
+    width: 300px;
+    height: 200px;
+    transition: transform .3s; }
+
+  .adLogo img {
+    justify-self: center; }
+
+  .adLogo:hover {
+    transform: scale(2); }
+
+  .ad {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    padding: 25px;
+    border-radius: 8px;
+    background-color: white;
+    animation: ad 4s alternate infinite; }
+
+  @keyframes ad {
+    from {
+      background-color: #ffb85e; }
+    to {
+      background-color: white; } }
+  /* Navigation Bar */
+  .navSmall {
+    display: none; }
+
+  label {
+    display: none; } }
