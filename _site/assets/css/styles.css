@@ -98,16 +98,16 @@ sub {
   width: 0px; }
 
 /* Navigation bar for smaller screen */
-input {
+.sInput {
   display: none; }
 
-label,
+.sLabel,
 ul {
   border: 1 px solid #cecfd5;
   border-radius: 6px;
   bottom: 0; }
 
-label {
+.sLabel {
   color: #ffb85e;
   cursor: pointer;
   display: inline-block;
@@ -122,10 +122,13 @@ label {
   z-index: 100;
   text-align: center; }
 
-label:hover {
+input[type="checkbox"] {
+  display: none; }
+
+.sLabel:hover {
   color: #ff7b29; }
 
-input:checked + label {
+.sInput:checked + .sLabel {
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
   color: #9799a7; }
 
@@ -139,7 +142,7 @@ input:checked + label {
   right: 0;
   margin: 0 auto; }
 
-input:checked ~ .navSmall {
+.sInput:checked ~ .navSmall {
   bottom: 2em; }
 
 ul {
@@ -166,6 +169,73 @@ li:last-child {
 
 .aNav:hover {
   color: #ff7b29; }
+
+/* Form */
+.row:after {
+  container: "";
+  display: table;
+  clear: both; }
+
+.col-25, .col-75, input[type=submit] {
+  width: 100%;
+  margin-top: 0; }
+
+.rammi {
+  border-radius: 5px;
+  background-color: #a5c7ff;
+  padding: 15px;
+  margin: 0 auto; }
+
+input[type=text], input[type=email], input[type=number], input[type=date] {
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 0px;
+  box-sizing: border-box;
+  background-color: #f1f1f1;
+  resize: vertical; }
+
+input[type=submit] {
+  width: 90%;
+  background-color: white;
+  padding: 14px 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold; }
+
+input[type=submit]:hover {
+  background-color: #68a0ff; }
+
+textarea {
+  width: 90%;
+  height: 150px;
+  padding: 12 20px;
+  border-sizing: border-box;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+  resize: vertical; }
+
+select {
+  width: 90%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+  margin-bottom: 20px;
+  resize: vertical; }
+
+.formLabel {
+  padding: 12px 12px 12px 0;
+  display: inline-block; }
+
+legend {
+  box-sizing: border-box;
+  font-size: 24px;
+  font-weight: bold;
+  max-width: 100%;
+  padding: 0;
+  padding-bottom: 10px; }
 
 /* Augl├¢sing */
 .adPic {
@@ -238,9 +308,9 @@ li:last-child {
 .sLabel:hover {
   color: #ff7b29; }
 
-input:checked + .sLabel {
+.sInput:checked + .sLabel {
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
-  color: #9799a7; }
+  scolor: #9799a7; }
 
 .socialNav {
   transition: all .15s ease;
@@ -284,6 +354,37 @@ input:checked ~ .socialNav {
 .paypal {
   background: White;
   width: 20px; }
+
+/* Tafla */
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 50px;
+  width: 100%;
+  /* table-layout: fixed; */ }
+
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+  font-weight: bold; }
+
+table tr {
+  background-color: #a5c7ff;
+  border: 1px solid #ddd;
+  padding: .35em; }
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center; }
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  background-color: #68a0ff; }
 
 /* Sta├░lar */
 a {
@@ -363,11 +464,53 @@ a {
   .navSmall {
     display: inline-block; }
 
-  label {
+  .sLabel {
     display: inline-block; }
 
   .navBar {
-    display: none; } }
+    display: none; }
+
+  /* Form */
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0; } }
+@media screen and (max-width: 900px) {
+  /* Table */
+  table {
+    border: 0; }
+
+  table caption {
+    font-size: 1.3em; }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px; }
+
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em; }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right; }
+
+  table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase; }
+
+  table td:last-child {
+    border-bottom: 0; } }
 @media (min-width: 900px) {
   .images {
     text-align: center;
@@ -440,7 +583,7 @@ a {
   .navSmall {
     display: none; }
 
-  label {
+  input[type="checkbox"] {
     display: none; }
 
   .navBar {
@@ -525,5 +668,5 @@ a {
   .navSmall {
     display: none; }
 
-  label {
+  .slabel {
     display: none; } }
